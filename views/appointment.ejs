@@ -1,0 +1,63 @@
+<%- include('header') -%>
+<body>
+    
+    <div class="appointmentForm">
+
+       
+        <form action="/" method="POST">
+
+            
+            <h1> Appointment</h1>
+         
+            <table>
+                <tr class="row">
+                    <td></td>
+                    <td>
+                        <input type="text" name="schedule"placeholder="Schedule Request">
+                    </td>
+                </tr>
+              
+                <tr class="row">
+                    <td><small>Name</small></td>
+                    <td><input type="text" name="name" id="" placeholder="your name"></td>
+
+                </tr>
+                <tr class="row">
+                    <td><small>Date</small></td>
+                    <td><input name="date" type="date"></td>
+                </tr>
+                <tr class="row">
+                    <td><small>Time</small></td>
+                    <td><input name="time" type="time"></td>
+                </tr>
+                <tr class="row">
+                    <td><small>Service</small></td>
+                    <td>
+                        <select name="service" id="">
+                            <option value="Pedicure">Pedicure</option>
+                            <option value="Manicure">Manicure</option>
+                            <option value="Eyebrown">Eyebrown</option>
+                            <option value="Fullset">Fullset</option>
+                        </select>
+                    </td>
+                 
+                </tr>
+            </table>
+            <button type="submit" name="button">BOOK</button>
+            <div class="nav">
+                <div class="cont">
+                    <p>Are you admin? click here --></p> 
+                </div>
+                <div class="cont">
+                    <a href="http://localhost:3000/admin">Admin</a>
+                </div>
+                
+            </div>
+        </form>
+        
+        
+    </div>
+
+   
+<%- include('footer') -%>
+  

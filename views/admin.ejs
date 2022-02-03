@@ -1,0 +1,52 @@
+<%-include ('header')-%>
+<body>
+    <div class="adminpage">
+        <div class=title>
+            <h1>Admin Page</h1>
+        </div>
+        
+
+        <div class="customer">
+            <form action="/delete" method="POST">
+                <!-- <%var a =0%> -->
+                <%customers.forEach(function(cust){%>
+                <table>
+                    
+
+                    
+                        <tr>
+                           
+                            <td><strong>schedule:</strong> <%=cust.schedule%></td>
+                            
+                            <td><strong>name:</strong> <%=cust.name%></td>     
+                            <td><strong>date:</strong> <%=cust.date%></td>
+                            <td><strong>time:</strong> <%=cust.time%></td>
+                            <td><strong>service:</strong> <%=cust.service%></td>
+                            <td><input type="checkbox" name="cancel" value="<%=cust._id%>""></td>
+                            
+                        </tr>
+                        
+                    
+            
+                </table>
+                    <!-- <%a=a+1%> -->
+                <%})%>
+       
+                    <button type="submit" name="button">Cancel</button>
+                    <p>Cancel appointment: Click on the check box and cancel button</p>
+                </form>
+               </div>
+     
+            
+        
+            
+          
+        </div>
+        
+            
+
+        
+
+
+    
+<%-include ('footer')-%>
